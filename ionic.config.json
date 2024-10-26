@@ -1,0 +1,7 @@
+{
+  "name": "KarlOctave_Parcial02",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
