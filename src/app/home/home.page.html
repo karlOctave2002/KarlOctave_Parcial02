@@ -1,8 +1,6 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Peliculas</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +12,23 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    @for (item of items; track item.id) {
+      <ion-card color="tertiary" >
+        <ion-card-header>
+          <ion-card-title>{{ item.title }}</ion-card-title>
+          
+        </ion-card-header>
+        <ion-card-content> {{ item.overview}} </ion-card-content>
+        <ion-card-subtitle>Precio :${{ item.price}} / Duracion : {{ item.duration}}</ion-card-subtitle>
+         
+      </ion-card>
+
+    }
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer </ion-title>
+  </ion-toolbar>
+</ion-footer>
